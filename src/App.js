@@ -1,7 +1,9 @@
+import { WordCard } from "./components/WordCard/index";
+
 function App() {
   return (
     <>
-      <div>Hello World</div>
+      <WordCard />
     </>
   );
 }
