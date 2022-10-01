@@ -1,29 +1,54 @@
-/* .container {
-  background-color: black;
-  max-width: 30%;
-  min-width: 30%;
-} */
+/* Card Container */
 
 .card {
+  background-color: aliceblue;
+  border: solid 1px aliceblue;
+  /* border-radius: 1.875rem; */
+  padding: 1.9rem;
+  width: 30%;
+}
+
+/* Player Container  */
+
+.player-container {
   border: solid 1px black;
-  border-radius: 30px;
-  padding: 20px;
-}
-
-.card h1 {
-  text-align: center;
-  font-size: 50px;
-}
-
-.card h1, h2 {
+  border-radius: 1.875rem;
   text-align: center;
 }
 
-.card-btn {
+/* Meaning Container  */
+
+.meaning-container {
+  border: solid 1px black;
+}
+
+/* Word and Phonetic Container */
+
+.word-container {
+  background-color: rgb(235, 235, 235);
+  border: solid 1px rgb(235, 235, 235);
+  border-radius: 1.875rem;
+  padding: 50px 0;
+  /* background-color: brown; */
+}
+
+.word-container h1 {
+  font-size: 3.125rem;
+  margin: 0;
+  text-align: center;
+  /* background-color: aqua; */
+}
+
+.word-container h2 {
+  color: grey;
+  margin: 0;
+  text-align: center;
+  /* background-color: blanchedalmond; */
+}
+
+/* Buttons Container */
+
+.btns-container {
   display: flex;
   justify-content: space-between;
-}
-
-.btn-icon {
-  height: 40px;
 }

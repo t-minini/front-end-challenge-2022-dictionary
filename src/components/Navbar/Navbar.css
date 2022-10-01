@@ -1,0 +1,27 @@
+.navbar {
+  text-align: center;
+  background-color: aqua;
+  height: 60px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  /* position: fixed; */
+  /* z-index: 1; */
+}
+
+.navbar h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 10px;
+}
+
+.navbar p {
+    text-align: end;
+    margin: 0;
+    /* margin-top: 25px; */
+    padding: 0;
+    /* max-width:max-content; */
+}
+
