@@ -6,12 +6,6 @@
   width: 100%;
   margin: 0 auto;
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* align-items: baseline; */
-  /* position: fixed; */
-  /* z-index: 1; */
 }
 
 .navbar h1 {
@@ -26,9 +20,6 @@
     margin: 0;
     margin-right: 100px;
     position: relative;
-
-    /* margin-top: 25px; */
     padding: 0;
-    /* max-width:max-content; */
 }
 

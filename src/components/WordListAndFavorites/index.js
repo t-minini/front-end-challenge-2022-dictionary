@@ -70,7 +70,7 @@ export function WordListAndFavorites() {
           >
             <Tab label="Word List" {...a11yProps(0)} />
             <Tab label="History" {...a11yProps(1)} />
-            <Tab label="Favorities" {...a11yProps(2)} />
+            <Tab label="Favorites" {...a11yProps(2)} />
           </Tabs>
         </AppBar>
         <SwipeableViews
