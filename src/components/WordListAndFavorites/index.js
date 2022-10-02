@@ -58,8 +58,8 @@ export function WordListAndFavorites() {
 
   return (
     <div className="container">
-      {/* <Box sx={{ bgcolor: "background.paper", width: 500 }}> */}
-        <AppBar position="static">
+      {/* <Box sx={{ boxShadow: 0 }}> */}
+        <AppBar position="static ">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -77,6 +77,7 @@ export function WordListAndFavorites() {
           axis={theme.direction === "rtl" ? "x-reverse" : "x"}
           index={value}
           onChangeIndex={handleChangeIndex}
+          
         >
           <TabPanel value={value} index={0} dir={theme.direction}>
             Word List Content Here

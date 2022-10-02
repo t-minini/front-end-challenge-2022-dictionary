@@ -1,8 +1,23 @@
+html {
+  height: 100%;
+}
 
+#root {
+  height: 100vh;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("./assets/images/cloud-background.jpeg");
+  /* display: flex; */
+  /* flex-direction: column; */
+  height: 100%;
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+}
 .word-list-container {
   display: flex;
-  margin: 50px auto;
+  margin: 3% auto;
   max-width: 80%;
   padding: 0;
-  /* position: absolute; */
 }

@@ -1,25 +1,32 @@
 .navbar {
   text-align: center;
-  background-color: aqua;
-  height: 60px;
+  background-color: #fff;
+  opacity: 0.5;
+  height: 40px;
   width: 100%;
   margin: 0 auto;
+  padding: 10px;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  /* align-items: baseline; */
   /* position: fixed; */
   /* z-index: 1; */
 }
 
 .navbar h1 {
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 3px;
     margin: 0;
-    padding: 10px;
 }
 
 .navbar p {
-    text-align: end;
+    text-align: right;
     margin: 0;
+    margin-right: 100px;
+    position: relative;
+
     /* margin-top: 25px; */
     padding: 0;
     /* max-width:max-content; */
