@@ -7,12 +7,23 @@
   width: 35%;
 }
 
+
+/* Favorite Button */
+
+.favorite {
+  /* background-color: aquamarine; */
+  text-align: right;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
 /* Word and Phonetic Container */
 
 .word-container {
   background-color: #ebebeb;
   border-radius: 16px;
   padding: 30px 0;
+  padding-top: 5px;
 }
 
 .word-container h1 {
