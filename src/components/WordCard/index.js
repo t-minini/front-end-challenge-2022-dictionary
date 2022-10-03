@@ -1,8 +1,6 @@
 // Material UI
 import * as React from "react";
 import Button from "@mui/material/Button";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 
 // Material UI Sound Player
 import { styled, useTheme } from "@mui/material/styles";
@@ -45,6 +43,7 @@ const TinyText = styled(Typography)({
 // Star Favorite Material UI
 
 export function WordCard() {
+  
   // Sound Player Material UI
   const theme = useTheme();
   const duration = 200; // seconds
@@ -66,16 +65,17 @@ export function WordCard() {
             <IconButton
               aria-label={favorited ? "favorite" : "not-favorite"}
               onClick={() => setFavorited(!favorited)}
+              disableRipple={true}
             >
               {favorited ? (
                 <StarBorderIcon
                   sx={{ fontSize: "2rem" }}
-                  htmlColor={mainIconColor}
+                  // htmlColor={mainIconColor}
                 />
               ) : (
                 <StarIcon
                   sx={{ fontSize: "2rem" }}
-                  htmlColor={mainIconColor}
+                  // htmlColor={mainIconColor}
                   style={{ color: "#ffa000" }}
                 />
               )}
@@ -167,16 +167,14 @@ export function WordCard() {
         <div className="meaning-container">
           <h2>Meaning</h2>
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-        </div>
-        <div className="btns-container">
-          <Button variant="contained">
-            <ArrowCircleLeftIcon />
-            &nbsp;&nbsp;&nbsp;Back
-          </Button>
-          <Button variant="contained">
-            Next&nbsp;&nbsp;&nbsp;
-            <ArrowCircleRightIcon />
-          </Button>
+          <div className="btns-container">
+            <Button variant="contained" size="medium">
+              back
+            </Button>
+            <Button variant="contained" size="medium">
+              next
+            </Button>
+          </div>
         </div>
       </div>
     </>

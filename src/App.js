@@ -7,14 +7,18 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <div className="page">
+      <div className="navbar">
+        <Navbar />
+      </div>
       <div className="word-list-container">
         <WordCard />
         <WordListAndFavorites />
       </div>
-      <Footer/>
-    </>
+      <div className="footer">
+        <Footer />
+      </div>
+    </div>
   );
 }
 

@@ -7,14 +7,10 @@
   width: 35%;
 }
 
-
 /* Favorite Button */
 
 .favorite {
-  /* background-color: aquamarine; */
   text-align: right;
-  /* margin: 0; */
-  /* padding: 0; */
 }
 
 /* Word and Phonetic Container */
@@ -23,7 +19,7 @@
   background-color: #ebebeb;
   border-radius: 16px;
   padding: 30px 0;
-  padding-top: 5px;
+  padding-top: 0px;
 }
 
 .word-container h1 {
@@ -51,21 +47,24 @@
   background-color: #ebebeb;
   border-radius: 16px;
   padding: 15px 15px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 0px auto;
 }
 
 .meaning-container h2 {
+  font-size: 30px;
   margin: 0;
 }
 
 .meaning-container p {
+  font-size: 18px;
   color: grey;
-  margin: 15px 0 0 0;
+  margin: 20px 0 20px 0;
 }
 
 /* Buttons Container */
 
 .btns-container {
+  height: 30px;
   display: flex;
   justify-content: space-between;
 }

@@ -1,12 +1,14 @@
-#root {
+/* #root {
   height: 100vh;
-}
+} */
 
 body {
   font-family: "Roboto", sans-serif;
   background-image: url("./assets/images/cloud-background.jpeg");
   /* background-color: brown; */
-  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100%; */
 }
 .word-list-container {
   /* background-color: aquamarine; */
@@ -14,7 +16,8 @@ body {
   display: flex;
   /* align-items: center; */
   /* justify-content: center; */
-  margin: 3% auto;
+  margin: 5% auto 5% auto;
   max-width: 80%;
+  /* height: 100%; */
   padding: 0;
 }

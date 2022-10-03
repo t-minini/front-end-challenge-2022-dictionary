@@ -11,6 +11,8 @@ import Box from "@mui/material/Box";
 
 import "./WordListAndFavorites.css";
 
+
+// Tab Material UI
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -45,6 +47,8 @@ function a11yProps(index) {
 }
 
 export function WordListAndFavorites() {
+
+  // Tab Material UI
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -59,7 +63,7 @@ export function WordListAndFavorites() {
   return (
     <div className="container">
       {/* <Box sx={{ boxShadow: 0 }}> */}
-        <AppBar position="static ">
+        <AppBar position="static">
           <Tabs
             value={value}
             onChange={handleChange}
