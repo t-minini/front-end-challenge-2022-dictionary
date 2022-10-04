@@ -1,11 +1,14 @@
+// Components
 import { WordCard } from "./components/WordCard/index";
 import { WordListAndFavorites } from "./components/WordListAndFavorites/index";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 
+// Css
 import "./App.css";
 
 function App() {
+
   return (
     <div className="page">
       <div className="navbar">
