@@ -2,7 +2,7 @@ import axios from "axios";
 import * as React from "react";
 import { useEffect, useState, useRef } from "react";
 
-// MUI Sound Player
+// MUI
 import Button from "@mui/material/Button";
 import StarIcon from "@mui/icons-material/Star";
 import IconButton from "@mui/material/IconButton";
@@ -18,8 +18,13 @@ export function WordCard() {
 
   // Dictionary API
   const [dictionary, setDictionary] = useState();
-  const [selectedWord, setSelectedWord] = useState("hello");
+  const [selectedWord, setSelectedWord] = useState("abasement");
 
+  // Music Player
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioPlayer = useRef(); //reference audio component
+
+  // Dictionary API
   useEffect(() => {
     async function fetchDictionary() {
       try {
@@ -38,10 +43,6 @@ export function WordCard() {
   console.log(dictionary);
 
   // Music Player
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const audioPlayer = useRef(); //reference audio component
-
   const play = () => {
     const prevValue = isPlaying;
     setIsPlaying(prevValue);
@@ -71,14 +72,14 @@ export function WordCard() {
             </div>
             <div>
               <h1>{dictionary.word}</h1>
-              <h2>{dictionary.phonetics[1].text}</h2>
+              <h2>{dictionary.phonetics[0].text}</h2>
             </div>
           </div>
 
           <div className="audio-player">
             <audio
               ref={audioPlayer}
-              src={dictionary.phonetics[1].audio}
+              src={dictionary.phonetics[0].audio}
               preload="metadata"
             ></audio>
             <button className="player-btn" onClick={play}>
