@@ -17,8 +17,8 @@ export function WordCard() {
   const [favorited, setFavorited] = React.useState(false);
 
   // Dictionary API
-  const [dictionary, setDictionary] = useState({});
-  const [selectedWord, setSelectedWord] = useState("cake");
+  const [dictionary, setDictionary] = useState();
+  const [selectedWord, setSelectedWord] = useState("hello");
 
   useEffect(() => {
     async function fetchDictionary() {
@@ -49,54 +49,56 @@ export function WordCard() {
   };
 
   return (
-    <>
-      <div className="card">
-        <div className="word-container">
-          <div className="favorite">
-            <IconButton
-              aria-label={favorited ? "favorite" : "not-favorite"}
-              onClick={() => setFavorited(!favorited)}
-              disableRipple={true}
-            >
-              {favorited ? (
-                <StarBorderIcon sx={{ fontSize: "2rem" }} />
-              ) : (
-                <StarIcon
-                  sx={{ fontSize: "2rem" }}
-                  style={{ color: "#ffa000" }}
-                />
-              )}
-            </IconButton>
+    !!dictionary && (
+      <>
+        <div className="card">
+          <div className="word-container">
+            <div className="favorite">
+              <IconButton
+                aria-label={favorited ? "favorite" : "not-favorite"}
+                onClick={() => setFavorited(!favorited)}
+                disableRipple={true}
+              >
+                {favorited ? (
+                  <StarBorderIcon sx={{ fontSize: "2rem" }} />
+                ) : (
+                  <StarIcon
+                    sx={{ fontSize: "2rem" }}
+                    style={{ color: "#ffa000" }}
+                  />
+                )}
+              </IconButton>
+            </div>
+            <div>
+              <h1>{dictionary.word}</h1>
+              <h2>{dictionary.phonetics[1].text}</h2>
+            </div>
           </div>
-          <div>
-            <h1>{dictionary.word}</h1>
-            {/* <h2>{dictionary.phonetics[1].text}</h2> */}
-          </div>
-        </div>
 
-        <div className="audio-player">
-          <audio
-            ref={audioPlayer}
-            // src={dictionary.phonetics[1].audio}
-            preload="metadata"
-          ></audio>
-          <button className="player-btn" onClick={play}>
-            <PlayArrowRounded sx={{ fontSize: "3rem" }} />
-          </button>
-        </div>
-        <div className="meaning-container">
-          <h2>Meaning</h2>
-          {/* <p>{dictionary.meanings[0].definitions[0].definition}</p> */}
-          <div className="btns-container">
-            <Button variant="contained" size="medium">
-              back
-            </Button>
-            <Button variant="contained" size="medium">
-              next
-            </Button>
+          <div className="audio-player">
+            <audio
+              ref={audioPlayer}
+              src={dictionary.phonetics[1].audio}
+              preload="metadata"
+            ></audio>
+            <button className="player-btn" onClick={play}>
+              <PlayArrowRounded sx={{ fontSize: "3rem" }} />
+            </button>
+          </div>
+          <div className="meaning-container">
+            <h2>Meaning</h2>
+            <p>{dictionary.meanings[0].definitions[0].definition}</p>
+            <div className="btns-container">
+              <Button variant="contained" size="medium">
+                back
+              </Button>
+              <Button variant="contained" size="medium">
+                next
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
-    </>
+      </>
+    )
   );
 }
